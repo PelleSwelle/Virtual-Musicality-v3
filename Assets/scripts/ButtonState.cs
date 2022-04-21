@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class ButtonState : MonoBehaviour
 {
+    public Material activeMaterial, passiveMaterial;
+    MeshRenderer meshRenderer;
+
     public bool isPressed;
 
-    void Start()
+    void OnValidate()
     {
-        this.isPressed = false;
+        meshRenderer = transform.GetChild(0).GetComponent<MeshRenderer>();
+        meshRenderer.material = passiveMaterial;
     }
 
 
+    void Start()
+    {
+
+        this.isPressed = false;
+    }
 }

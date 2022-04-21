@@ -9,28 +9,31 @@ public class Mouse : MonoBehaviour
     // public Rigidbody buttonRigidBody;
 
     // base
-    public GameObject sliderControl;
-    public Rigidbody baseRigidBody;
-    public GameObject slider;
+    // public GameObject sliderControl;
+    // public Rigidbody baseRigidBody;
+    // public GameObject slider;
 
     // raycasting 
     public Vector3 worldPosition;
+    public LibPdInstance pd;
     public TextMeshPro cursorText;
-    private ArrayList buttonsList;
-    public GameObject chordsPanel;
+    public ArrayList buttonsList;
+    // public GameObject chordComponent;
     public ChordManager chordManager;
     private int root, third, fifth, seventh;
     private float passiveZ, activeZ;
     public Ray ray;
     public RaycastHit hitData;
 
+
     void OnValidate()
     {
+        pd = GameObject.Find("synth").GetComponent<LibPdInstance>();
         // slider = GameObject.Find("slider");
         passiveZ = 1.6f;
         activeZ = 1.8f;
         // chordsPanel = GameObject.Find("ChordsPanel");
-        chordManager = chordsPanel.GetComponent<ChordManager>();
+        chordManager = GameObject.Find("synth").GetComponent<ChordManager>();
 
         root = chordManager.root;
         third = chordManager.third;
@@ -40,19 +43,13 @@ public class Mouse : MonoBehaviour
         // Add all the chord buttons to a list in order to manipulate them in bulk.
         buttonsList = new ArrayList();
         buttonsList.Add(GameObject.Find("Btn_major"));
-        buttonsList.Add(GameObject.Find("Btn_minor"));
+        buttonsList.Add(GameObject.Find("Btn_m"));
         buttonsList.Add(GameObject.Find("Btn_7"));
-        buttonsList.Add(GameObject.Find("Btn_minor7"));
+        buttonsList.Add(GameObject.Find("Btn_m7"));
         buttonsList.Add(GameObject.Find("Btn_maj7"));
-        buttonsList.Add(GameObject.Find("Btn_minorMaj7"));
-        buttonsList.Add(GameObject.Find("Btn_dim"));
+        buttonsList.Add(GameObject.Find("Btn_mMaj7"));
         buttonsList.Add(GameObject.Find("Btn_aug"));
-
-
-
-
-        // synthBody = GameObject.Find("SynthBase");
-
+        buttonsList.Add(GameObject.Find("Btn_dim"));
 
         cursorText = this.GetComponent<TextMeshPro>();
 
@@ -68,10 +65,15 @@ public class Mouse : MonoBehaviour
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+        // turning on and off the entire synth
+        toggleOnOff();
+
 
         // if the raycast hits something at all
         if (Physics.Raycast(ray, out hitData, 1000))
         {
+
+            // show the title of the object pointed at, at the cursor position
             worldPosition = hitData.point;
             cursorText.transform.position = new Vector3(
                 worldPosition.x,
@@ -80,6 +82,8 @@ public class Mouse : MonoBehaviour
             );
             cursorText.SetText(hitData.transform.ToString());
 
+
+            // slider
             if (Input.GetMouseButtonDown(0))
             {
                 if (hitData.transform.tag == "slider")
@@ -95,9 +99,9 @@ public class Mouse : MonoBehaviour
                 }
             }
 
+            // buttons
             if (Input.GetMouseButtonDown(0))
             {
-
                 foreach (GameObject chordButton in buttonsList)
                 {
                     if (hitData.transform.parent.name == chordButton.name)
@@ -115,7 +119,7 @@ public class Mouse : MonoBehaviour
                                 seventh + 2
                             );
                         }
-                        else if (hitData.transform.parent.name == "Btn_minor")
+                        else if (hitData.transform.parent.name == "Btn_m")
                         {
                             chordManager.playNotes(
                                 root,
@@ -133,7 +137,7 @@ public class Mouse : MonoBehaviour
                                 seventh
                             );
                         }
-                        else if (hitData.transform.parent.name == "Btn_minor7")
+                        else if (hitData.transform.parent.name == "Btn_m7")
                         {
                             chordManager.playNotes(
                                 root,
@@ -151,7 +155,7 @@ public class Mouse : MonoBehaviour
                                 seventh + 1
                             );
                         }
-                        else if (hitData.transform.parent.name == "Btn_minorMaj7")
+                        else if (hitData.transform.parent.name == "Btn_mMaj7")
                         {
                             chordManager.playNotes(
                                 root,
@@ -189,6 +193,23 @@ public class Mouse : MonoBehaviour
         }
     }
 
+    void toggleOnOff()
+    {
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            print("muted");
+            pd.SendBang("chordOff");
+            pd.SendBang("bassOff");
+            pd.SendBang("drumsOff");
+        }
+        else if (Input.GetKeyDown(KeyCode.Return))
+        {
+            print("playing");
+            pd.SendBang("chordOn");
+            pd.SendBang("bassOn");
+            pd.SendBang("drumsOn");
+        }
+    }
     void grabButton()
     {
         // buttonRigidBody.constraints = RigidbodyConstraints.;

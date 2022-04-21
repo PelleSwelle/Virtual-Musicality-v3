@@ -447,12 +447,12 @@ MonoBehaviour:
   isActive: 0
   mesh: {fileID: 1506355999131418935}
   pd: {fileID: 0}
-  valueField: {fileID: 0}
-  activeMaterial: {fileID: 0}
-  passiveMaterial: {fileID: 0}
-  sliderBase: {fileID: 0}
-  topCollider: {fileID: 0}
-  bottomCollider: {fileID: 0}
+  valueField: {fileID: 2246351255822847371}
+  activeMaterial: {fileID: 2100000, guid: 482cc69d781d711478d542b2ad537eb7, type: 2}
+  passiveMaterial: {fileID: 2100000, guid: 4ff5b0a6ecc771e40a9dbb972db57a73, type: 2}
+  sliderBase: {fileID: 5185401983631119056}
+  topCollider: {fileID: 922021127908238646}
+  bottomCollider: {fileID: 3837307646734913430}
 --- !u!1 &7067035471562006300
 GameObject:
   m_ObjectHideFlags: 0
