@@ -24,7 +24,7 @@ public class sliderScript : MonoBehaviour
         activeZ = .1f;
         isActive = false;
         mesh = this.transform.GetChild(0).gameObject;
-        mouse = GameObject.Find("mouseControl").GetComponent<Mouse>();
+        mouse = GameObject.Find("mouseController").GetComponent<Mouse>();
         meshRenderer = mesh.GetComponent<MeshRenderer>();
         sliderBase = this.transform.GetChild(2).gameObject;
         topCollider = sliderBase.transform.GetChild(1).GetComponent<Collider>();
@@ -35,11 +35,11 @@ public class sliderScript : MonoBehaviour
         yMax = yRest + .2f;
     }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(new Vector3(mesh.transform.position.x, yMin, mesh.transform.position.z), .1f);
-        Gizmos.DrawSphere(new Vector3(mesh.transform.position.x, yMax, mesh.transform.position.z), .1f);
-    }
+    // void OnDrawGizmos()
+    // {
+    //     Gizmos.DrawSphere(new Vector3(mesh.transform.position.x, yMin, mesh.transform.position.z), .1f);
+    //     Gizmos.DrawSphere(new Vector3(mesh.transform.position.x, yMax, mesh.transform.position.z), .1f);
+    // }
 
     void Update()
     {
@@ -49,7 +49,9 @@ public class sliderScript : MonoBehaviour
         }
 
         // TODO this should be rounded to one or two decimals.
-        valueField.SetText(this.transform.GetChild(0).transform.localPosition.y.ToString());
+        // valueField.SetText(mesh.transform.localPosition.y.ToString());
+
+
         // this script is attached to all sliders, so check which one, we are grabbing.
         if (this.name == "CutoffSlider")
         {

@@ -9,9 +9,9 @@ public class Mouse : MonoBehaviour
     // public Rigidbody buttonRigidBody;
 
     // base
-    public GameObject sliderControl;
-    public Rigidbody baseRigidBody;
-    public GameObject slider;
+    // public GameObject sliderControl;
+    // public Rigidbody baseRigidBody;
+    // public GameObject slider;
 
     // raycasting 
     public Vector3 worldPosition;

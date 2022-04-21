@@ -7,7 +7,7 @@ public class ChordManager : MonoBehaviour
     public LibPdInstance pd;
 
     // BUTTONS
-    public GameObject btn_major, btn_minor, btn_7, btn_minor7, btn_major7, btn_minorMajor7, btn_dim, btn_aug;
+    public GameObject btn_major, btn_minor, btn_7, btn_m7, btn_maj7, btn_mMaj7, btn_dim, btn_aug;
 
     // public GameObject[] buttons;
 
@@ -34,17 +34,17 @@ public class ChordManager : MonoBehaviour
 
         btn_minor = GameObject.Find("Btn_minor");
 
-        // btn_7 = GameObject.Find("btn_7");
+        btn_7 = GameObject.Find("Btn_7");
 
-        // btn_minor7 = GameObject.Find("btn_minor7");
+        btn_m7 = GameObject.Find("Btn_m7");
 
-        // btn_major7 = GameObject.Find("btn_major7");
+        btn_maj7 = GameObject.Find("Btn_maj7");
 
-        // btn_minorMajor7 = GameObject.Find("btn_minorMajor7");
+        btn_mMaj7 = GameObject.Find("Btn_mMaj7");
 
-        // btn_dim = GameObject.Find("btn_dim");
+        btn_dim = GameObject.Find("Btn_dim");
 
-        // btn_aug = GameObject.Find("btn_aug");
+        btn_aug = GameObject.Find("Btn_aug");
 
 
         // buttons = new GameObject[6];
@@ -158,19 +158,19 @@ public class ChordManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            toggleActive(btn_minor7);
+            toggleActive(btn_m7);
             playNotes(root, third + 1, fifth + 1, seventh);
 
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
-            toggleActive(btn_major7);
+            toggleActive(btn_maj7);
             playNotes(root, third, fifth, seventh + 1);
 
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            toggleActive(btn_minorMajor7);
+            toggleActive(btn_mMaj7);
             playNotes(root, third - 1, fifth, seventh + 1);
         }
         // foreach (GameObject button in buttonsList)

@@ -447,7 +447,7 @@ MonoBehaviour:
   isActive: 0
   mesh: {fileID: 1506355999131418935}
   pd: {fileID: 0}
-  valueField: {fileID: 0}
+  valueField: {fileID: 2246351255822847371}
   activeMaterial: {fileID: 0}
   passiveMaterial: {fileID: 0}
   sliderBase: {fileID: 0}
