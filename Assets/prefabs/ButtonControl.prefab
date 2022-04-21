@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.24}
-  m_SizeDelta: {x: 0.35, y: 0.16}
+  m_AnchoredPosition: {x: 0, y: 0.233}
+  m_SizeDelta: {x: 0.3342, y: 0.1343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3251301537216854894
 MeshRenderer:
@@ -220,6 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a76252b143eb944ab8ec82a75f27b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeMaterial: {fileID: 2100000, guid: 482cc69d781d711478d542b2ad537eb7, type: 2}
+  passiveMaterial: {fileID: 2100000, guid: 4ff5b0a6ecc771e40a9dbb972db57a73, type: 2}
   isPressed: 0
 --- !u!1 &8274702316431332172
 GameObject:
@@ -282,7 +284,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3324096961576636649, guid: 10f2d016713e45e428e48d9fc6a61a8a, type: 3}
+  - {fileID: 2100000, guid: 4ff5b0a6ecc771e40a9dbb972db57a73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

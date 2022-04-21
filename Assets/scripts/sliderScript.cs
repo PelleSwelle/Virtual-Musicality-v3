@@ -20,6 +20,7 @@ public class sliderScript : MonoBehaviour
 
     void OnValidate()
     {
+        pd = GameObject.Find("synth").GetComponent<LibPdInstance>();
         passiveZ = 1.6f;
         activeZ = .1f;
         isActive = false;
@@ -31,15 +32,43 @@ public class sliderScript : MonoBehaviour
         bottomCollider = sliderBase.transform.GetChild(2).GetComponent<Collider>();
         // setting the rest position of the slider
         yRest = mesh.transform.position.y;
-        yMin = yRest - .2f;
-        yMax = yRest + .2f;
+        yMin = yRest - 2f;
+        yMax = yRest + 2f;
     }
 
-    // void OnDrawGizmos()
-    // {
-    //     Gizmos.DrawSphere(new Vector3(mesh.transform.position.x, yMin, mesh.transform.position.z), .1f);
-    //     Gizmos.DrawSphere(new Vector3(mesh.transform.position.x, yMax, mesh.transform.position.z), .1f);
-    // }
+    void OnDrawGizmos()
+    {
+        // MIN
+        Gizmos.DrawSphere(
+            new Vector3(
+                mesh.transform.position.x,
+                yMin,
+                mesh.transform.position.z
+            ),
+            .1f
+        );
+
+        // REST
+        Gizmos.DrawSphere(
+            new Vector3(
+                mesh.transform.position.x,
+                yRest,
+                mesh.transform.position.z
+            ),
+            .1f
+        );
+
+
+        // MAX
+        Gizmos.DrawSphere(
+            new Vector3(
+                mesh.transform.position.x,
+                yMax,
+                mesh.transform.position.z
+            ),
+            .1f
+        );
+    }
 
     void Update()
     {
@@ -48,32 +77,82 @@ public class sliderScript : MonoBehaviour
             moveSlider();
         }
 
+        float sliderYValue = this.transform.GetChild(0).transform.localPosition.y;
+
         // TODO this should be rounded to one or two decimals.
         // valueField.SetText(mesh.transform.localPosition.y.ToString());
 
 
         // this script is attached to all sliders, so check which one, we are grabbing.
-        if (this.name == "CutoffSlider")
+        // ******************** PAD ********************
+        if (this.name == "PadVolume")
         {
-            pd.SendFloat("chordCutoff", this.transform.GetChild(0).transform.localPosition.y);
+            pd.SendFloat("chordVolume", sliderYValue);
         }
-        else if (this.name == "BassSlider")
+        else if (this.name == "PadFilter")
         {
-            pd.SendFloat("bassVolume", this.transform.GetChild(0).transform.localPosition.y);
+            pd.SendFloat("chordCutoff", sliderYValue);
         }
-        else if (this.name == "DrumSlider")
+
+
+        else if (this.name == "ChorusMix")
         {
-            pd.SendFloat("drumVolume", this.transform.GetChild(0).transform.localPosition.y);
+            pd.SendFloat("chorusMix", sliderYValue);
         }
-        else if (this.name == "ChordVolumeSlider")
+        else if (this.name == "ChorusSpeed")
         {
-            pd.SendFloat("chordVolume", this.transform.GetChild(0).transform.localPosition.y);
+            pd.SendFloat("chorusMix", sliderYValue);
+        }
+        else if (this.name == "ChorusDepth")
+        {
+            pd.SendFloat("chorusDepth", sliderYValue);
+        }
+
+        // TODO waveforms
+        // ******************** BASS ********************
+        else if (this.name == "BassVolume")
+        {
+            pd.SendFloat("bassVolume", sliderYValue);
+        }
+        else if (this.name == "BassFilter")
+        {
+            pd.SendFloat("bassFilter", sliderYValue);
+        }
+        // TODO waveforms
+        // TODO Rythm On/Off
+
+        // ******************** DRUMS ********************
+        else if (this.name == "DrumVolume")
+        {
+            pd.SendFloat("drumVolume", sliderYValue);
+        }
+        else if (this.name == "DrumFilter")
+        {
+            pd.SendFloat("drumCutoff", sliderYValue);
         }
         else if (this.name == "TempoSlider")
         {
             // TODO this one does not work yet.
-            pd.SendFloat("tempo", this.transform.GetChild(0).transform.localPosition.y * 1000);
+            pd.SendFloat("tempo", sliderYValue * 1000);
         }
+        // ******************** ARP ********************
+        else if (this.name == "ArpVolume")
+        {
+            // TODO this one does not work yet.
+            pd.SendFloat("arpVolume", sliderYValue * 1000);
+        }
+
+        else if (this.name == "ArpFilter")
+        {
+            // TODO this one does not work yet.
+            pd.SendFloat("arpCutoff", sliderYValue * 1000);
+        }
+        else if (this.name == "ArpReverbMix")
+        {
+            // TODO this one does not work yet.
+            pd.SendFloat("arpVerbSize", sliderYValue * 1000);
+        }
+        // TODO waveform
     }
 
     /// <summary>
