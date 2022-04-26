@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShaderNorthWobble
+  m_Shader: {fileID: -6465566751694194690, guid: b67bf79bcd7695b479a7e1a9e8110887,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_7931bb226b8d45c6981fdc5e815cd81b:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_04b2bae0cb194006bd995fe449e1f1e0: 42.2
+    - Vector1_64f65504e9af4fe497e52e4786f5309f: 0.64
+    - Vector1_7581f5955b2a44d080377cb16776b786: 8.31
+    - Vector1_8147b84b3ebf4895b68a14ff16fd3b1a: -28
+    - Vector1_ae6fc9845cdb41f3b378f4320c51bb95: 0
+    - Vector1_cffd611d4d264230b2542dc2d3e18a3f: 1
+    - Vector1_f2f7810428694009988875e629874a68: 16.42
+    m_Colors:
+    - Color_927dd9217c5140ef8f17cba9a0cbde42: {r: 0, g: 1, b: 0.6653924, a: 0}
+    - Vector2_24996bb19f534aa284d3262e79cab91e: {r: 0.5, g: 0, b: 0, a: 0}
+    - Vector2_48340c58119543df85e273def54e5b14: {r: 0.5, g: 15.81, b: 0, a: 0}
+    - Vector2_49185e92774544438dfe52a10b9a9f27: {r: 0.05, g: -0.2, b: 0, a: 0}
+    - Vector2_bcc2dcc8e49c4aa2803aa30ac1630428: {r: 6.97, g: 9.1, b: 0, a: 0}
+    - Vector2_beb6a51192684f8ab33024323527cf1a: {r: 0.05, g: 0, b: 0, a: 0}
+    - Vector3_ddbc9faf00d04ac999606a4941782d61: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
