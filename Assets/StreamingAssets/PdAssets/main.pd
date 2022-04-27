@@ -1,6 +1,6 @@
-#N canvas 0 0 1854 1151 10;
+#N canvas 0 25 1440 769 10;
 #X declare -path patch_editor_abs;
-#X obj 1505 464 cnv 15 522 234 empty empty receives 20 12 0 20 #e0e0e0
+#X obj 1469 464 cnv 15 649 234 empty empty receives 20 12 0 20 #e0e0e0
 #404040 0;
 #X obj 1789 503 cnv 15 109 185 empty empty ON\ /\ OFF 20 12 0 14 #ff80c0
 #404040 0;
@@ -202,7 +202,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 2 256 0;
+#fcfcfc #000000 #000000 5 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -256,7 +256,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 5 256 0;
+#fcfcfc #000000 #000000 8 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -310,7 +310,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 3 256 0;
+#fcfcfc #000000 #000000 4 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -364,7 +364,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 2 256 0;
+#fcfcfc #000000 #000000 3 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -418,7 +418,7 @@
 #X msg 177 60 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 2 256 0;
+#fcfcfc #000000 #000000 3 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -634,7 +634,7 @@
 #X msg 177 62 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 1 256 0;
+#fcfcfc #000000 #000000 2 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 418 s SAVE-S;
@@ -688,7 +688,7 @@
 #X msg 177 62 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 1 256 0;
+#fcfcfc #000000 #000000 2 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 418 s SAVE-S;
@@ -1174,7 +1174,7 @@
 #X msg 177 62 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 3 256 0;
+#fcfcfc #000000 #000000 4 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 418 s SAVE-S;
@@ -2800,7 +2800,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
-#fcfcfc #000000 #000000 0 256 0;
+#fcfcfc #000000 #000000 2 256 0;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -5192,7 +5192,7 @@ more elaborate pd-code for deeper control.;
 #X obj 204 151 r open-organelle-map!;
 #X msg 204 198 \; pd-organelle-map vis \$1;
 #X obj 203 272 r open-modules!;
-#N canvas 664 279 571 453 modules 0;
+#N canvas 911 68 571 453 modules 1;
 #X obj 196 91 cnv 15 180 15 empty empty MODULATION: 10 8 0 12 #9898dc
 #fcfcfc 0;
 #X obj 196 112 bng 15 250 50 0 \$0-create-basic-lfo! empty <--BASIC-LFO
@@ -6666,15 +6666,15 @@ and send to the name of the module \, for example [s basic-osc];
 #X obj 1101 2183 dac~;
 #X obj 1099 1247 analog-filter 2;
 #X obj 180 1340 mixer4 2;
-#X obj 795 1111 channel-eq 1;
+#X obj 809 1088 channel-eq 1;
 #X obj 804 754 cnv 15 207 328 empty empty BASS 20 12 0 14 #e0e0e0 #404040
 0;
 #X obj 1004 1973 cnv 15 397 143 empty empty MASTER\ MIXER 110 9 0 20
 #e0e0e0 #404040 0;
-#X obj 1100 2002 mixer4 2;
+#X obj 1099 2002 mixer4 2;
 #X text 1275 2066 CHORDS;
-#X text 1275 2052 BASS;
-#X text 1275 2037 DRUMS;
+#X text 1274 2038 BASS;
+#X text 1274 2052 DRUMS;
 #X obj 1086 1068 mixer4 2;
 #X text 1262 1072 MIXER FOR INDIVIDUAL NOTES;
 #X text 1275 2082 LEAD;
@@ -6729,10 +6729,9 @@ and send to the name of the module \, for example [s basic-osc];
 #X obj 1333 1830 *~;
 #X floatatom 1284 1318 5 0 0 0 - - -, f 5;
 #X floatatom 1366 1319 5 0 0 0 - - -, f 5;
-#X obj 1801 753 cnv 15 362 721 empty empty ARPEGGIATOR 20 12 0 20 #e0e0e0
+#X obj 1801 753 cnv 15 679 721 empty empty ARPEGGIATOR 20 12 0 20 #e0e0e0
 #404040 0;
-#X obj 1805 780 mega-sequencer 1;
-#X obj 1805 1105 basic-osc 1;
+#X obj 1808 798 mega-sequencer 1;
 #X floatatom 1333 1814 5 0 0 0 - - -, f 5;
 #X obj 45 1048 channel-eq 2;
 #X obj 507 1048 channel-eq 2;
@@ -6741,18 +6740,16 @@ and send to the name of the module \, for example [s basic-osc];
 #X obj 826 780 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 #fcfcfc #000000 #000000 33 256 0;
 #X obj 826 794 / 127;
-#X obj 1805 1222 analog-filter 2;
-#X obj 1805 1327 megaverb 1;
-#X obj 1792 650 r arpOff;
-#X obj 1792 668 r arpOn;
+#X obj 1832 1175 analog-filter 2;
+#X obj 1827 1294 megaverb 1;
 #X obj 632 1642 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 1903 503 cnv 15 109 157 empty empty VOLUME 20 12 0 14 #ff80c0
+#X obj 2028 503 cnv 15 109 157 empty empty VOLUME 20 12 0 14 #ff80c0
 #404040 0;
-#X obj 1913 529 r drumVolume;
-#X obj 1913 547 r bassVolume;
-#X obj 1913 565 r chordVolume;
-#X obj 1913 583 r arpVolume;
+#X obj 2035 534 r drumVolume;
+#X obj 2035 552 r bassVolume;
+#X obj 2035 570 r chordVolume;
+#X obj 2035 588 r arpVolume;
 #X obj 1705 503 cnv 15 79 57 empty empty TEMPO 20 12 0 14 #ff80c0 #404040
 0;
 #X obj 1714 527 r tempo;
@@ -6771,15 +6768,65 @@ and send to the name of the module \, for example [s basic-osc];
 #X obj 1603 600 r arpVerbSize;
 #X obj 1603 617 r snareVerbSize;
 #X text 883 775 set to 33;
-#X connect 23 0 110 0;
-#X connect 24 0 112 0;
-#X connect 25 0 111 0;
-#X connect 27 0 23 0;
+#X obj 2181 1427 *~;
+#X obj 2181 1368 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 2181 1395 0;
+#X obj 2208 1368 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 2180 1092 *~;
+#X obj 2179 1035 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 2179 1062 0;
+#X obj 2176 1270 *~;
+#X obj 2177 1214 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 2177 1241 0;
+#X obj 2204 1214 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 2180 1345 Pulse, f 8;
+#X obj 1903 470 cnv 15 120 225 empty empty ARP\ ON\ /\ OFF 14 10 0
+14 #ff80c0 #404040 0;
+#X obj 1905 673 r arpPulseOn;
+#X obj 1905 655 r arpPulseOff;
+#X obj 1904 492 r arpOff;
+#X obj 1904 511 r arpOn;
+#X obj 2243 998 basic-osc 5;
+#X obj 2244 1180 basic-osc 5;
+#X obj 2239 1337 basic-osc 5;
+#X text 2179 1009 Triangle, f 9;
+#X text 2178 1191 Saw, f 9;
+#X obj 1905 573 r arpTriangleOff;
+#X obj 1905 614 r arpSawOff;
+#X obj 1905 632 r arpSawOn;
+#X obj 2205 1035 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 2185 918 *~;
+#X obj 2184 860 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 2184 887 0;
+#X obj 2210 860 bng 26 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 2251 816 bwl-osc 8;
+#X msg 2206 1062 1;
+#X msg 2204 1241 1;
+#X msg 2210 887 1;
+#X msg 2206 1395 1;
+#X text 2185 834 Sine, f 9;
+#X obj 1904 534 r arpSineOff;
+#X obj 1904 552 r arpSineOn;
+#X obj 1905 592 r arpTriangleOn;
+#X text 1122 754 Chord values \, Root: -42 \, Third: -38 \, Fifth:
+-35 \, Seventh: -32;
+#X connect 23 0 109 0;
+#X connect 24 0 111 0;
+#X connect 25 0 110 0;
 #X connect 27 0 29 0;
 #X connect 27 0 28 0;
+#X connect 27 0 23 0;
 #X connect 28 0 25 0;
 #X connect 28 0 107 0;
-#X connect 28 0 113 0;
+#X connect 28 0 112 0;
 #X connect 29 0 24 0;
 #X connect 32 0 51 1;
 #X connect 35 0 36 0;
@@ -6814,7 +6861,7 @@ and send to the name of the module \, for example [s basic-osc];
 #X connect 75 0 76 0;
 #X connect 76 0 73 1;
 #X connect 79 0 75 0;
-#X connect 80 0 120 0;
+#X connect 80 0 117 0;
 #X connect 81 0 98 0;
 #X connect 82 0 81 1;
 #X connect 83 0 84 0;
@@ -6838,32 +6885,66 @@ and send to the name of the module \, for example [s basic-osc];
 #X connect 103 0 55 3;
 #X connect 104 0 43 1;
 #X connect 105 0 43 2;
-#X connect 107 0 108 0;
-#X connect 108 0 116 0;
-#X connect 109 0 103 0;
-#X connect 110 0 51 0;
-#X connect 111 0 51 2;
-#X connect 112 0 32 0;
-#X connect 113 0 73 0;
-#X connect 114 0 115 0;
-#X connect 115 0 113 1;
-#X connect 116 0 117 0;
-#X connect 117 0 88 0;
-#X connect 118 0 90 0;
-#X connect 119 0 92 0;
-#X connect 120 0 74 0;
-#X connect 122 0 97 0;
-#X connect 123 0 95 0;
-#X connect 124 0 99 0;
-#X connect 125 0 109 0;
-#X connect 127 0 102 0;
-#X connect 130 0 62 0;
-#X connect 131 0 63 0;
-#X connect 132 0 64 0;
-#X connect 133 0 65 0;
-#X connect 134 0 94 0;
-#X connect 135 0 104 0;
-#X connect 136 0 105 0;
-#X connect 137 0 116 1;
-#X connect 138 0 117 1;
-#X connect 139 0 32 1;
+#X connect 107 0 155 0;
+#X connect 107 0 156 0;
+#X connect 107 0 157 0;
+#X connect 107 0 168 0;
+#X connect 108 0 103 0;
+#X connect 109 0 51 0;
+#X connect 110 0 51 2;
+#X connect 111 0 32 0;
+#X connect 112 0 73 0;
+#X connect 113 0 114 0;
+#X connect 114 0 112 1;
+#X connect 115 0 116 0;
+#X connect 116 0 88 0;
+#X connect 117 0 74 0;
+#X connect 119 0 97 0;
+#X connect 120 0 95 0;
+#X connect 121 0 99 0;
+#X connect 122 0 108 0;
+#X connect 124 0 102 0;
+#X connect 127 0 62 0;
+#X connect 128 0 63 0;
+#X connect 129 0 64 0;
+#X connect 130 0 65 0;
+#X connect 131 0 94 0;
+#X connect 132 0 104 0;
+#X connect 133 0 105 0;
+#X connect 134 0 115 1;
+#X connect 135 0 116 1;
+#X connect 136 0 32 1;
+#X connect 138 0 115 0;
+#X connect 139 0 140 0;
+#X connect 140 0 138 1;
+#X connect 141 0 172 0;
+#X connect 142 0 115 0;
+#X connect 143 0 144 0;
+#X connect 144 0 142 1;
+#X connect 145 0 115 0;
+#X connect 146 0 147 0;
+#X connect 147 0 145 1;
+#X connect 148 0 170 0;
+#X connect 151 0 141 0;
+#X connect 152 0 139 0;
+#X connect 153 0 90 0;
+#X connect 154 0 92 0;
+#X connect 155 0 142 0;
+#X connect 156 0 145 0;
+#X connect 157 0 138 0;
+#X connect 160 0 143 0;
+#X connect 161 0 146 0;
+#X connect 162 0 148 0;
+#X connect 163 0 169 0;
+#X connect 164 0 115 0;
+#X connect 165 0 166 0;
+#X connect 166 0 164 1;
+#X connect 167 0 171 0;
+#X connect 168 0 164 0;
+#X connect 169 0 142 1;
+#X connect 170 0 145 1;
+#X connect 171 0 164 1;
+#X connect 172 0 138 1;
+#X connect 174 0 165 0;
+#X connect 175 0 167 0;
+#X connect 176 0 163 0;
